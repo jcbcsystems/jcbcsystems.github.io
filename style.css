@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.menu-btn {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-attachment: fixed;
+    background: black;
+    background: linear-gradient(to right,rgba(2, 15, 48, 0.705),rgb(2, 21, 51));
+    background-position: center;
+    background-size: cover;
+    padding: 20px 50px 0 0;
+    text-align: right;
+    top: 0;
+    color: #fff;
+    display: none;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-attachment: fixed;
+    background: black;
+    background: linear-gradient(to right,rgba(2, 15, 48, 0.705),rgb(2, 21, 51));
+    background-position: center;
+    background-size: cover;
+    padding: 20px 50px 0 0;
+    text-align: right;
+    top: 0;
+}
+
+.show-nav {
+    transform: translateX(0);
+}
+
+nav > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+
+.fondo-header {
+    position: relative;
+    margin-top: 70px;
+    background: url(./img/header.jpg);
+    background: #1d976c;
+    background: -webkit-linear-gradient(to right,rgba(55,59,68,.609),rgba(66,134,244,.616)),url(./img/header.jpg);
+    background: linear-gradient(to right,rgba(55,59,68,.603),rgba(66,134,244,.603)),url(./img/header.jpg);
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.textos-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 430px;
+    width: 100%;
+}
+
+.textos-header h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+.textos-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.textos-header h3 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.acerca, .contactame {    
+    min-height: 90vh;
+    padding-top: 70px;
+}
+
+.acerca-de-mi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.acerca-de-mi .texto {
+    width: 50%;
+    padding: 0 5px;
+}
+
+.acerca-de-mi .texto p {
+    margin: 20px;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.acerca-de-mi .texto .iconos {
+    margin-top: 5xp;
+    text-align: center;
+}
+
+.acerca-de-mi .texto i {
+    font-size: 2.5rem;
+    box-shadow: 0 10px 10px -5px;
+    width: 70px;
+    height: 60px;
+    margin: 5px;
+}
+
+.acerca-de-mi .texto i::before {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acerca-de-mi .imagen {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acerca-de-mi .imagen img {
+    width: 100%;
+    height: 280px;
+}
+
+.adresses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.adresses > a {
+    width: 340px;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #2252acb7;
+    margin: 10px 0;
+    overflow: hidden;
+    padding-left: 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.adresses > a > * {
+    margin: 0 5px;
+}
+
+.adresses img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer {
+    background: linear-gradient(to right,rgba(2, 15, 48, 0.705),rgb(2, 21, 51));
+    background-position: center;
+    background-size: cover;
+    padding: 10px 0;
+}
+
+.footer .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav { 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100vh;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+        padding-left: 20px;
+    }
+
+    nav a {
+        display: block;
+        text-align: left;
+        padding: 20px 0;
+    }
+    .acerca {
+        padding-top: 90px;
+    }
+    
+
+    .acerca-de-mi {
+        flex-direction: column;
+    }
+
+
+    .acerca-de-mi .texto { 
+        width: 100%;
+    }
+    
+    .acerca-de-mi .imagen { 
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .acerca-de-mi .imagen img { 
+        width: 70%;
+        height: 60%;
+    }
+
+}
